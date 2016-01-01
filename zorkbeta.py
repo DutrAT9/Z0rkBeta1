@@ -7,7 +7,7 @@ print('''##########################################################
 # [+] GITHUB:       https://github.com/gabrielD9         #
 # [+] FACEBOOK:     https://fb.com/gabriel.dutra.47884754#
 ##########################################################''')
-def is_port_open(host, port):
+def site_porta(host, port):
 	try:
 		sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		sock.connect((host, port))
@@ -16,7 +16,7 @@ def is_port_open(host, port):
 	return True
 
 for port in range(21, 3306):
-	if is_port_open(sys.argv[1], port):
+	if site_porta(sys.argv[1], port):
 		print("{}  <<Porta aberta".format(port))
 
 print("*/*/*/*/*/*/*/FINALIZADO/*/*/*/*/*/*/*/*/*")
